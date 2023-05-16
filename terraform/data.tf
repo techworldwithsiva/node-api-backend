@@ -22,3 +22,12 @@ data "aws_iam_policy_document" "rds_secret" {
 data "aws_ssm_parameter" "rds_secret_arn" {
   name = "/timing/rds/rds_secret_arn"
 }
+
+data "aws_ssm_parameter" "app_alb_security_group_id" {
+  name = "/timing/vpc/app_alb_security_group_id"
+}
+
+data "aws_ssm_parameter" "vpc_id" {
+  name = "/timing/vpc/vpc_id"
+}
+
