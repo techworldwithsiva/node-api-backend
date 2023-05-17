@@ -31,3 +31,7 @@ data "aws_ssm_parameter" "vpc_id" {
   name = "/timing/vpc/vpc_id"
 }
 
+data "aws_ssm_parameter" "rds_endpoint" {
+  name = "/timing/rds/rds_endpoint"
+}
+
