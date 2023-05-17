@@ -22,3 +22,9 @@
 - DBPORT: Database server listening port
 
 These variables need to be set
+
+#### Architecture
+
+**NOTE:** Since we are doing backend application first. I am provisioning API ALB into public subnet for testing. Ideally it should be in private subnets and accept traffic only from Web ECS Service. We can implement this later.
+
+![alt text](api-backend.jpeg)
