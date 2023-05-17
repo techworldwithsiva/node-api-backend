@@ -16,8 +16,7 @@ resource "aws_ecs_task_definition" "api" {
             "name": "api-ecs",
             "portMappings": [
                 {
-                    "containerPort": 3000,
-                    "hostPort": 80
+                    "containerPort": 3000
                 }
             ],
             "environment" : ${jsonencode(local.env_vars)},
