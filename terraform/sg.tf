@@ -21,3 +21,14 @@ resource "aws_security_group_rule" "example" {
   security_group_id = aws_security_group.api_ecs.id
   source_security_group_id = local.app_alb_security_group_id
 }
+
+#allowing traffic from API ECS on 5432
+resource "aws_security_group_rule" "rds_rule" {
+  type              = "ingress"
+  from_port         = 5432
+  description = "allowing traffic from API ECS on 5432"
+  to_port           = 5432
+  protocol          = "tcp"
+  security_group_id = local.rds_security_group_id
+  source_security_group_id = aws_security_group.api_ecs.id
+}
