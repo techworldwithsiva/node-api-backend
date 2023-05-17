@@ -27,4 +27,7 @@ These variables need to be set
 
 **NOTE:** Since we are doing backend application first. I am provisioning API ALB into public subnet for testing. Ideally it should be in private subnets and accept traffic only from Web ECS Service. We can implement this later.
 
+* First we need to build the application through docker build.
+* Push to AWS ECR Repo.
+
 ![alt text](api-backend.jpeg)
